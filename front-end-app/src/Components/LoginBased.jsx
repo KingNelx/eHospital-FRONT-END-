@@ -8,14 +8,6 @@ const LoginBased = () => {
         <div className='container mt-5' style={{ width: '500px'}}>
             <h3 className='mb-5 text-center'> Sign in to your account </h3>
             <>
-                <FloatingLabel label="Firstname" className='mb-3'>
-                    <Form.Control type="text" placeholder="Firstname" />
-                </FloatingLabel>
-
-                <FloatingLabel label="Lastname" className='mb-3'>
-                    <Form.Control type="text" placeholder="Lastname" />
-                </FloatingLabel>
-
                 <FloatingLabel label="Email" className='mb-3'>
                     <Form.Control type="email" placeholder="Email" />
                 </FloatingLabel>
@@ -28,8 +20,8 @@ const LoginBased = () => {
                     <Form.Control type="password" placeholder="Password" />
                 </FloatingLabel>
 
-                <Button variant="outline-success">Sign in</Button>{' '}
-                <Link> No Account? </Link>
+                <Link to='/all-data'><Button variant="outline-success">Sign in</Button>{' '}</Link>
+                <Link to='/sign-up'> No Account? </Link>
             </>
         </div>
     );
