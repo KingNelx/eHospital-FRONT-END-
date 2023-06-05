@@ -4,6 +4,8 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Accordion from 'react-bootstrap/Accordion';
+import { Link } from 'react-router-dom';
 
 const DataView = () => {
 
@@ -31,17 +33,56 @@ const DataView = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
             </Navbar>
             <>
-                <Button variant="primary" onClick={handleShow}>
-                    Launch
-                </Button>
+                <div className='mx-5 mt-5'>
+                    <Button variant="outline-primary" onClick={handleShow}>
+                        DASHBOARD
+                    </Button>
+                </div>
 
                 <Offcanvas show={show} onHide={handleClose}>
                     <Offcanvas.Header closeButton>
-                        <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                        <Offcanvas.Title>DASHBOARD</Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
-                        Some text as placeholder. In real life you can have the elements you
-                        have chosen. Like, text, images, lists, etc.
+                        <Accordion>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>TOTAL PATIENTS ADMITTED</Accordion.Header>
+                                <Accordion.Body>
+                                    TEST
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header>TOTAL MILD PATIENTS</Accordion.Header>
+                                <Accordion.Body>
+                                    TEST
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="2">
+                                <Accordion.Header>TOTAL MODERATE PATIENTS</Accordion.Header>
+                                <Accordion.Body>
+                                    TEST
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="3">
+                                <Accordion.Header>TOTAL CHRONIC PATIENTS</Accordion.Header>
+                                <Accordion.Body>
+                                    TEST
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="4">
+                                <Accordion.Header>TOTAL STABLE PATIENTS</Accordion.Header>
+                                <Accordion.Body>
+                                    TEST
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="5">
+                                <Accordion.Header>TOTAL ACUTE PATIENTS</Accordion.Header>
+                                <Accordion.Body>
+                                    TEST
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
+                        <Link to='/'> Log out </Link>
                     </Offcanvas.Body>
                 </Offcanvas>
             </>
